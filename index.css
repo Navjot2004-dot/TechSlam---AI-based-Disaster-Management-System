@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DisasterNet Design System - Emergency Response Platform */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 220 15% 4%;
+    --foreground: 210 40% 98%;
+
+    /* Emergency Severity System */
+    --emergency-critical: 0 85% 60%;    /* Critical disasters */
+    --emergency-high: 15 90% 55%;       /* High risk events */
+    --emergency-medium: 45 95% 50%;     /* Medium risk events */
+    --emergency-low: 120 60% 45%;       /* Low risk/safe zones */
+    --emergency-info: 210 85% 55%;      /* Information/updates */
+
+    /* Card System */
+    --card: 220 15% 6%;
+    --card-foreground: 210 40% 98%;
+    --card-border: 220 10% 15%;
+
+    /* Interactive Elements */
+    --primary: 210 85% 55%;              /* Primary actions */
+    --primary-foreground: 210 40% 98%;
+    --primary-hover: 210 85% 50%;
+
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-hover: 220 15% 16%;
+
+    /* Status Indicators */
+    --success: 120 60% 45%;
+    --success-foreground: 120 20% 95%;
+    --warning: 45 95% 50%;
+    --warning-foreground: 45 20% 95%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 20% 95%;
+
+    /* Neutral Tones */
+    --muted: 220 10% 20%;
+    --muted-foreground: 220 5% 65%;
+    --accent: 220 15% 12%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Form Elements */
+    --border: 220 10% 15%;
+    --input: 220 15% 8%;
+    --input-border: 220 10% 20%;
+    --ring: 210 85% 55%;
+
+    /* Map & Visualization */
+    --map-background: 220 20% 3%;
+    --heatmap-low: 120 60% 45%;
+    --heatmap-medium: 45 95% 50%;
+    --heatmap-high: 15 90% 55%;
+    --heatmap-critical: 0 85% 60%;
+
+    /* Gradients */
+    --gradient-emergency: linear-gradient(135deg, hsl(var(--emergency-critical)), hsl(var(--emergency-high)));
+    --gradient-warning: linear-gradient(135deg, hsl(var(--emergency-high)), hsl(var(--emergency-medium)));
+    --gradient-safe: linear-gradient(135deg, hsl(var(--emergency-low)), hsl(var(--emergency-info)));
+    --gradient-dashboard: linear-gradient(180deg, hsl(var(--background)), hsl(220 15% 2%));
+
+    /* Shadows & Effects */
+    --shadow-card: 0 4px 20px hsla(220, 15%, 2%, 0.8);
+    --shadow-elevated: 0 10px 40px hsla(220, 15%, 2%, 0.9);
+    --glow-emergency: 0 0 20px hsla(var(--emergency-critical), 0.3);
+    --glow-warning: 0 0 20px hsla(var(--emergency-medium), 0.3);
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 220 15% 5%;
+    --sidebar-foreground: 210 20% 85%;
+    --sidebar-primary: 210 85% 55%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 220 15% 8%;
+    --sidebar-accent-foreground: 210 20% 85%;
+    --sidebar-border: 220 10% 12%;
+    --sidebar-ring: 210 85% 55%;
+  }
+
+  .light {
+    --background: 210 20% 98%;
+    --foreground: 220 15% 10%;
+
+    --emergency-critical: 0 85% 55%;
+    --emergency-high: 15 90% 50%;
+    --emergency-medium: 45 95% 45%;
+    --emergency-low: 120 50% 40%;
+    --emergency-info: 210 80% 50%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 10%;
+    --card-border: 220 20% 90%;
+
+    --primary: 210 80% 50%;
+    --primary-foreground: 210 20% 98%;
+    --primary-hover: 210 80% 45%;
+
+    --secondary: 210 20% 95%;
+    --secondary-foreground: 220 15% 10%;
+    --secondary-hover: 210 20% 90%;
+
+    --success: 120 50% 40%;
+    --warning: 45 90% 45%;
+    --destructive: 0 80% 55%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 220 10% 40%;
+    --border: 220 20% 90%;
+    --input: 210 20% 98%;
+    --input-border: 220 20% 85%;
+
+    --map-background: 210 20% 96%;
+    --gradient-dashboard: linear-gradient(180deg, hsl(var(--background)), hsl(210 20% 96%));
+
+    --sidebar-background: 210 20% 96%;
+    --sidebar-foreground: 220 15% 15%;
+    --sidebar-accent: 210 20% 92%;
+    --sidebar-border: 220 20% 88%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
